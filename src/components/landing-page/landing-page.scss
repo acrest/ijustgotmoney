@@ -1,0 +1,51 @@
+.landing-page {
+	text-align: center;
+	.header {
+		font-size: 50px;
+		margin:10px;
+	}
+	.info {
+		display: flex;
+		.display {
+			.logo {
+
+			}
+			.summary {
+				margin: 20px;
+				font-size: 17px;
+			}
+			.highlights {
+				.title {
+					font-size: 35px;
+					margin:	10px;
+				}
+				.sub-title {
+					font-size: 17px;
+					margin: 10px;
+				}
+				ul {
+					list-style-position: inside;
+					font-size: 20px;
+				}
+			}
+			.contact {
+				font-size:17px;
+				.title {
+					font-size: 22px;
+				}
+				.phone {
+
+				}
+				.email {
+
+				}
+				.color {
+					color: dodgerblue;
+				}
+			}
+		}
+		.form {
+			background-color: lightgray;
+		}
+	}
+}
