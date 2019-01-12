@@ -1,55 +1,141 @@
 .landing-page {
-	text-align: center;
-	.header {
-		font-size: 50px;
-		margin:10px;
-	}
-	.info {
-		display: flex;
-		.display {
-			.logo {
-
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: lightgrey;
+	height: 100%;
+	width: 100%;
+	.usable-space {
+		height: 100%;
+		background-color: white;
+		margin-right: 50px;
+		margin-left: 50px;
+		text-align: center;
+		.logo {
+			text-align: left;
+			img {
+				max-height: 65px;
+			}
+		}
+		.intro {
+			overflow: auto;
+			background-color: #DBEBF7;
+			min-height: 400px;
+			text-align: left;
+			color: white;
+			.header {
+				background-color: black;
+				margin-left: 50px;
+				margin-top: 50px;
+				font-size: 50px;
+				max-width: 490px;
+				padding: 10px;
 			}
 			.summary {
-				margin: 20px;
+				background-color: black;
+				margin-left: 50px;
+				margin-top: 20px;
+				margin-right: 100px;
 				font-size: 17px;
+				padding: 10px;
 			}
-			.highlights {
-				.title {
-					font-size: 35px;
-					margin:	10px;
-				}
-				.sub-title {
-					font-size: 17px;
-					margin: 10px;
-				}
-				ul {
-					list-style-position: inside;
-					font-size: 20px;
-				}
+			button {
+				margin-top: 40px;
+				margin-left: 50px;
+				background-color: #5BB5E2;
+				color: white;
+				border-color: black;
+				height: 40px;
+				width: 220px;
+				margin-bottom: 30px;
+				font-size: 14px;
 			}
-			.contact {
-				font-size:17px;
-				.title {
-					font-size: 22px;
+		}
+		.info {
+			text-align: left;
+			display: inline-block;
+			.display {
+				.highlights {
+					.title {
+						font-size: 35px;
+						margin-top:	40px;
+						margin-left: 40px;
+					}
+					.underline {
+						background-color: #5BB5E2;
+						height: 2px;
+						width: 153px;
+						margin-left: 40px;
+						margin-top: 5px;
+						margin-bottom: 10px;
+					}
+					.sub-title {
+						font-size: 17px;
+						margin: 10px 40px 15px 40px;
+					}
+					ul {
+						list-style-position: inside;
+						font-size: 20px;
+					}
 				}
-				.phone {
+				.contact {
+					text-align:center;
+					.wrapper {
+						margin: 0 auto;
+						width:100%;
+						font-size:17px;
+						img {
+							max-width: 200px;
+							max-height: 70px;
+						}
+						.title {
+							font-size: 22px;
+						}
+						.phone {
 
-				}
-				.email {
+						}
+						.email {
 
-				}
-				.color {
-					color: dodgerblue;
+						}
+						.color {
+							color: dodgerblue;
+						}
+					}
 				}
 			}
 		}
-		.form {
-			min-width: 350px;
-			background-color: lightgray;
-			.title {
-
+	}
+	.form {
+		text-align: center;
+		position: absolute;
+		width: 350px;
+		min-height: 300px;
+		background-color: lightgray;
+		top: 20%;
+		left: 34%;
+		.title {
+			margin:	15px;
+		}
+		.inputs {
+			text-align: left;
+			.field-name {
+				margin-left: 10px;
+				margin-bottom: 5px;
 			}
+			input {
+				margin-left: 20px;
+				margin-bottom:10px;
+				width: 300px;
+			}
+		}
+		button {
+			margin-top: 40px;
+			margin-left: -7px;
+			background-color: #5BB5E2;
+			color: white;
+			border-color: black;
+			height: 40px;
+			width: 200px;
+			margin-bottom: 30px;
+			font-size: 14px;
 		}
 	}
 }
