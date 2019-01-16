@@ -92,7 +92,7 @@
 
 						}
 						.color {
-							color: dodgerblue;
+							color: #1F9DD8;
 						}
 					}
 				}
@@ -115,23 +115,26 @@
 			padding-left: 15px;
 			.display-phone {
 				margin-top: 10px;
-				color: rgb(7, 128, 250);
+				color: #1F9DD8;
 				font-size: 20px
 			}
 			.display-email {
 				margin-top: 10px;
-				color: rgb(7, 128, 250);
+				color: #1F9DD8;
 				padding-bottom: 20px;
 				font-size: 20px
 			}
 		}
 		.inputs {
+			fieldset {
+				border: none;
+			}
 			border: .5px solid #bbbbbb;
 			background-color: #f3f3f3;
 			text-align: left;
 			.title {
 				color: white;
-				background-color: rgb(18, 134, 192);
+				background-color: #1F9DD8;
 				.header {
 					font-size: 25px;
 				}
@@ -144,14 +147,14 @@
 				}
 			}
 			.field-name {
-				margin-left: 20px;
+				margin-left: 10px;
 				margin-bottom: 5px;
 			}
 			input {
-				margin-left: 20px;
+				margin-left: 10px;
 				margin-bottom:10px;
 				width: 300px;
-				hight: 20px;
+				height: 20px;
 				background-color: #f3f3f3;
 				border-top: none;
 				border-left: none;
@@ -162,13 +165,20 @@
 			button {
 				margin-left: 20px;
 				margin-top: 25px;
-				background-color: #f3f3f3;
-				color: rgb(18, 134, 192);
-				border-color: rgb(18, 134, 192);
+				background-color: #1F9DD8;
+				color: white;
 				height: 40px;
 				width: 200px;
 				margin-bottom: 30px;
 				font-size: 14px;
+				&.submitted {
+					display: none;
+				}
+			}
+			.thank-you-message {
+				font-size: 23px;
+				margin-left: 10px;
+				margin-bottom: 20px;
 			}
 		}
 	}

@@ -24,16 +24,16 @@
 						Years of cash advance experience
 					</li>
 					<li>
-						Highest cash advance rate in the industry
+						Highest cash advance limit in the industry
 					</li>
 					<li>
-						Your first cash advance if FREE with approval
+						Your first cash advance is FREE with approval
 					</li>
 					<li>
 						Online account access and easy uploading of documents
 					</li>
 					<li>
-						Scalable funding that grows with your lifestyle/earnings
+						Scalable funding that grows with your income
 					</li>
 				</div>
 				<!-- <div class="contact">
@@ -55,40 +55,51 @@
 			</div>
 		</div>
 	</div>
-	<div id="form" class="form">
-		<div class="title">
-			Contact Us Today
-			<div class="display-phone">972-293-4400</div>
-			<div class="display-email">info@ijustgotmoney.com</div>
-		</div>
-		<div class="inputs">
+
+	<form class="gform pure-form pure-form-stacked" method="POST" data-email="info@ijustgotmoney.com"
+	action="https://script.google.com/macros/s/AKfycbyiVjVcy7OVR27xI9kKo1vQ4F56dtTe0q1IKiCmI7L3-CwbRAuI/exec">
+		<div id="form" class="form">
 			<div class="title">
-				<div class="header">
-					Free Quote
+				Contact Us Today
+				<div class="display-phone">972-293-4400</div>
+				<div class="display-email">info@ijustgotmoney.com</div>
+			</div>
+			<div class="inputs">
+				<div class="title">
+					<div class="header">
+						Free Quote
+					</div>
+					<div class="sub-title">
+						Complete this form and we'll contact you.
+					</div>
 				</div>
-				<div class="sub-title">
-					Complete this form and we'll contact you.
-				</div>
+				<ng-container>
+					<fieldset>
+						<label class="field-name" for="first-name">First Name: </label>
+						<input id="first-name" name="first-name"/>
+					</fieldset>
+					<fieldset>
+						<label class="field-name" for="last-name">Last Name:</label>
+						<input id="last-name" name="last-name"/>
+					</fieldset>
+					<fieldset>
+						<label class="field-name" for="phone">Phone Number:</label>
+						<input id="phone" name="phone"/>
+					</fieldset>
+					<fieldset>
+						<label class="field-name" for="email">Email Address:</label>
+						<input type="text" id="email" name="email"/>
+					</fieldset>
+					<button (click)="submit()" [ngClass]="{ 'submitted': showThankYou, 'not-submitted': !showThankYou }">
+						<i class="fa fa-paper-plane"></i>&nbsp;Submit
+					</button>
+				</ng-container>
+				<ng-container *ngIf="showThankYou">
+					<div class="thank-you-message">
+						Thank you.  We will contact you shortly.
+					</div>
+				</ng-container>
 			</div>
-			<div class="field-name">
-				First Name:
-			</div>
-			<input type="text" name="fname">
-			<div class="field-name">
-				Last Name:
-			</div>
-			<input type="text" name="lname">
-			<div class="field-name">
-				Phone Number:
-			</div>
-			<input type="text" name="phone">
-			<div class="field-name">
-				Email Address:
-			</div>
-			<input type="text" name="email">
-			<button (click)="closeInputModal()">
-				Submit
-			</button>
 		</div>
-	</div>
+	</form>
 </div>

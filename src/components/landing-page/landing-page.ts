@@ -5,25 +5,21 @@ import { Component, OnInit } from "@angular/core";
 	templateUrl: "./landing-page.html",
 	styleUrls: ["./landing-page.scss"]
 })
+
+//  GFORM URL: https://script.google.com/macros/s/AKfycbzJPKXe4uPwmP5No1k32urIvI_fehi9ZfVCloYz7Q/exec
 export class LandingPage implements OnInit
 {
-	public showInfoInputModal: boolean;
+	public showThankYou: boolean;
 	private constructor()
 	{
 
 	}
 	public ngOnInit(): void
 	{
-		this.showInfoInputModal = false;
+		this.showThankYou = false;
 	}
-
-	public showInputModal(): void
+	public submit(): void
 	{
-		this.showInfoInputModal = true;
-	}
-
-	public closeInputModal(): void
-	{
-		this.showInfoInputModal = false;
+		this.showThankYou = true;
 	}
 }
