@@ -1,0 +1,31 @@
+
+app, #app {
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	background-color: #d8dcdf;
+
+	.app-content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: auto;
+	}
+
+	&.showNav {
+		imging-nav {
+			display: flex;
+		}
+
+		.app-content {
+			top: 72px;
+		}
+	}
+
+}

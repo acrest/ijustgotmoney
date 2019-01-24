@@ -1,111 +1,102 @@
 <div class="landing-page">
-	<div class="logo-wrapper">
-		<div class="logo">
-			<img src="assets/logo.png">
-		</div>
-	</div>
-	<div id="info" class="page">
-		<div class="top">
-			<div class="header">Turn Income into Same-Day Cash with iJustGotMoney.com</div>
-			<div class="summary">Stop waiting weeks for your cash. Get cash on your income within 24-hours by getting an advance with iJGM.</div>
-		</div>
-		<div class="info">
-			<div class="display">
-				<div class="highlights">
-					<div class="pre-highlight">Waiting 7, 14 and sometimes 30-days for your paycheck can can put a great deal of stress on your cash flow. By working with iJGM, you can build up more cash flow to pay bills, meet emergency demands and provide for your family.</div>
-					<div class="title">Highlights of Our Services</div>
-					<div class="sub-title">
-						By focusing on our clients and their personal needs, we have created a better cash advance experience. Here is what you can expect when you get a cash advance with iJGM:
-					</div>
-					<li>
-						Same-day funding
-					</li>
-					<li>
-						Years of cash advance experience
-					</li>
-					<li>
-						Highest cash advance limit in the industry
-					</li>
-					<li>
-						Your first cash advance is FREE with approval
-					</li>
-					<li>
-						Online account access and easy uploading of documents
-					</li>
-					<li>
-						Scalable funding that grows with your income
-					</li>
-				</div>
-				<!-- <div class="contact">
-					<div class="wrapper">
-							<img src="assets/logo.png">
-							<span class="info">
-								<div class="title">
-									Contact Us Today
-								</div>
-								<div class="phone">
-									<span class="color">Phone:</span> 972-293-4400
-								</div>
-								<div class="email">
-									<span class="color">Email:</span> info@ijustgotmoney.com
-								</div>
-							</span>
-					</div>
-				</div> -->
+	<div class="center-page">
+		<div class="logo-wrapper">
+			<div class="logo">
+				<img src="assets/logo.png">
 			</div>
 		</div>
-	</div>
+		<div id="info" class="page">
+			<div class="top">
+				<div class="header">Turn Income into Same-Day Cash with iJustGotMoney.com</div>
+				<div class="summary">Stop waiting weeks for your cash. Get cash on your income within 24-hours by getting a cash advance with iJGM.</div>
+			</div>
+			<div class="info">
+				<div class="display">
+					<div class="highlights">
+						<div class="pre-highlight">Waiting 7, 14 and sometimes 30-days for your paycheck can put a great deal of stress on your cash needs. By working with iJGM, you can get cash to pay bills, meet emergency demands and even take a vacation with your family.</div>
+						<div class="title">Highlights of Our Services</div>
+						<div class="sub-title">
+							By focusing on our customers and their personal needs, we have created a better cash advance experience. Here is what you can expect when you get a cash advance with iJGM:
+						</div>
+						<li>
+							Same-day cash funding
+						</li>
+						<li>
+							Years of cash advance experience
+						</li>
+						<li>
+							Highest cash advance limit in the industry
+						</li>
+						<li>
+							Your first cash advance is INTEREST FREE with approval
+						</li>
+						<li>
+							Online account access and easy uploading of documents
+						</li>
+						<li>
+							Scalable cash funding that grows with your income
+						</li>
+					</div>
+					<!-- <div class="contact">
+						<div class="wrapper">
+								<img src="assets/logo.png">
+								<span class="info">
+									<div class="title">
+										Contact Us Today
+									</div>
+									<div class="phone">
+										<span class="color">Phone:</span> 972-293-4400
+									</div>
+									<div class="email">
+										<span class="color">Email:</span> info@ijustgotmoney.com
+									</div>
+								</span>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
 
-	<form class="gform pure-form pure-form-stacked" method="POST" data-email="info@ijustgotmoney.com"
-	action="https://script.google.com/macros/s/AKfycbyiVjVcy7OVR27xI9kKo1vQ4F56dtTe0q1IKiCmI7L3-CwbRAuI/exec">
-		<div id="form" class="form">
-			<div class="form-top">
-				<div class="title">
-					<div class="header">
-						Contact Us Today
+		<form class="gform pure-form pure-form-stacked" method="POST" data-email="info@ijustgotmoney.com"
+		action="https://script.google.com/macros/s/AKfycbyiVjVcy7OVR27xI9kKo1vQ4F56dtTe0q1IKiCmI7L3-CwbRAuI/exec">
+			<div id="form" class="form">
+				<div class="inputs">
+					<div class="title">
+						<div class="header">
+							Free Quote
+						</div>
+						<div class="sub-title">
+							Complete this form and we'll contact you.
+						</div>
 					</div>
-				</div>
-				<div class="info">
-					<div class="display-phone">972-293-4400</div>
-					<a href="mailto:info@ijustgotmoney.com" class="display-email">info@ijustgotmoney.com</a>
+					<ng-container>
+						<fieldset>
+							<label class="field-name" for="first-name">First Name: </label>
+							<input id="first-name" name="first-name"/>
+						</fieldset>
+						<fieldset>
+							<label class="field-name" for="last-name">Last Name:</label>
+							<input id="last-name" name="last-name"/>
+						</fieldset>
+						<fieldset>
+							<label class="field-name" for="phone">Phone Number:</label>
+							<input id="phone" name="phone"/>
+						</fieldset>
+						<fieldset>
+							<label class="field-name" for="email">Email Address:</label>
+							<input type="text" id="email" name="email"/>
+						</fieldset>
+						<button (click)="submit()" [ngClass]="{ 'submitted': showThankYou, 'not-submitted': !showThankYou }">
+							<i class="fa fa-paper-plane"></i>&nbsp;Submit
+						</button>
+					</ng-container>
+					<ng-container *ngIf="showThankYou">
+						<div class="thank-you-message">
+							Thank you.  We will contact you shortly.
+						</div>
+					</ng-container>
 				</div>
 			</div>
-			<div class="inputs">
-				<div class="title">
-					<div class="header">
-						Free Quote
-					</div>
-					<div class="sub-title">
-						Complete this form and we'll contact you.
-					</div>
-				</div>
-				<ng-container>
-					<fieldset>
-						<label class="field-name" for="first-name">First Name: </label>
-						<input id="first-name" name="first-name"/>
-					</fieldset>
-					<fieldset>
-						<label class="field-name" for="last-name">Last Name:</label>
-						<input id="last-name" name="last-name"/>
-					</fieldset>
-					<fieldset>
-						<label class="field-name" for="phone">Phone Number:</label>
-						<input id="phone" name="phone"/>
-					</fieldset>
-					<fieldset>
-						<label class="field-name" for="email">Email Address:</label>
-						<input type="text" id="email" name="email"/>
-					</fieldset>
-					<button (click)="submit()" [ngClass]="{ 'submitted': showThankYou, 'not-submitted': !showThankYou }">
-						<i class="fa fa-paper-plane"></i>&nbsp;Submit
-					</button>
-				</ng-container>
-				<ng-container *ngIf="showThankYou">
-					<div class="thank-you-message">
-						Thank you.  We will contact you shortly.
-					</div>
-				</ng-container>
-			</div>
-		</div>
-	</form>
+		</form>
+	</div>
 </div>
