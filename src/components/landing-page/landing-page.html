@@ -7,7 +7,8 @@
 		</div>
 		<div id="info" class="page">
 			<div class="top">
-				<div class="header">Turn Income into Same-Day Cash with iJustGotMoney.com</div>
+				<div *ngIf="showThankYou" class="header">Thank you.  We will contact you shortly.</div>
+				<div *ngIf="!showThankYou" class="header">Turn Income into Same-Day Cash with iJustGotMoney.com</div>
 				<div class="summary">Stop waiting weeks for your cash. Get cash on your income within 24-hours by getting a cash advance with iJGM.</div>
 			</div>
 			<div class="info">
@@ -60,7 +61,18 @@
 		<form class="gform pure-form pure-form-stacked" method="POST" data-email="info@ijustgotmoney.com"
 		action="https://script.google.com/macros/s/AKfycbyiVjVcy7OVR27xI9kKo1vQ4F56dtTe0q1IKiCmI7L3-CwbRAuI/exec">
 			<div id="form" class="form">
-				<div class="inputs">
+				<div class="form-top">
+					<div class="title">
+						<div class="header">
+							Contact Us Today
+						</div>
+					</div>
+					<div class="info">
+						<div class="display-phone">972-293-4400</div>
+						<a href="mailto:info@ijustgotmoney.com" class="display-email">info@ijustgotmoney.com</a>
+					</div>
+				</div>
+				<div class="inputs" [ngClass]="{ 'submitted': showThankYou, 'not-submitted': !showThankYou }">
 					<div class="title">
 						<div class="header">
 							Free Quote
@@ -86,14 +98,9 @@
 							<label class="field-name" for="email">Email Address:</label>
 							<input type="text" id="email" name="email"/>
 						</fieldset>
-						<button (click)="submit()" [ngClass]="{ 'submitted': showThankYou, 'not-submitted': !showThankYou }">
+						<button (click)="submit()">
 							<i class="fa fa-paper-plane"></i>&nbsp;Submit
 						</button>
-					</ng-container>
-					<ng-container *ngIf="showThankYou">
-						<div class="thank-you-message">
-							Thank you.  We will contact you shortly.
-						</div>
 					</ng-container>
 				</div>
 			</div>
