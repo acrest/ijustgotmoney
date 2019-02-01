@@ -7,5 +7,25 @@ import { Component } from "@angular/core";
 })
 export class AppComponent
 {
+	public showThankYou: boolean;
+	public screenWidth: string;
+	public isMobile: boolean;
 
+	public constructor()
+	{
+		this.checkWidth();
+	}
+
+	public checkWidth(): void
+	{
+		const width: number = window.innerWidth;
+		if (width <= 768)
+		{
+			this.isMobile = true;
+		}
+		else
+		{
+			this.isMobile = false;
+		}
+	}
 }

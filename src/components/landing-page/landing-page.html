@@ -1,4 +1,4 @@
-<div class="landing-page">
+<div class="landing-page" [ngClass]="{ 'large': !isMobile, 'small': isMobile }">
 	<div class="center-page">
 		<div class="logo-wrapper">
 			<div class="logo">
@@ -7,7 +7,7 @@
 		</div>
 		<div id="info" class="page">
 			<div class="top">
-				<div *ngIf="showThankYou" class="header">Thank you.  We will contact you shortly.</div>
+				<div *ngIf="showThankYou" class="header">Thank You For Your Interest In Our Cash Advance Services.Please Call Us Today With Any Questions About Our Services.</div>
 				<div *ngIf="!showThankYou" class="header">Turn Income into Same-Day Cash with iJustGotMoney.com</div>
 				<div class="summary">Stop waiting weeks for your cash. Get cash on your income within 24-hours by getting a cash advance with iJGM.</div>
 			</div>
