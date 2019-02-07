@@ -7,8 +7,9 @@ import { Component } from "@angular/core";
 })
 export class AppComponent
 {
-	public showThankYou: boolean;
-	public isMobile: boolean;
+	public isSmall: boolean;
+	public isMedium: boolean;
+	public isLarge: boolean;
 
 	public constructor()
 	{
@@ -17,14 +18,21 @@ export class AppComponent
 
 	public checkWidth(): void
 	{
+		this.isSmall = false;
+		this.isMedium = false;
+		this.isLarge = false;
 		const width: number = window.innerWidth;
 		if (width <= 768)
 		{
-			this.isMobile = true;
+			this.isSmall = true;
+		}
+		else if (width <= 1100)
+		{
+			this.isMedium = true;
 		}
 		else
 		{
-			this.isMobile = false;
+			this.isLarge = true;
 		}
 	}
 }

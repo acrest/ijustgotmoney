@@ -1,4 +1,4 @@
-<div class="landing-page" [ngClass]="{ 'large': !isMobile, 'small': isMobile }">
+<div class="landing-page" [ngClass]="{ 'large': isLarge, 'small': isSmall, 'medium': isMedium }">
 	<div class="center-page">
 		<div class="logo-wrapper">
 			<div class="logo">
@@ -11,14 +11,14 @@
 				<div *ngIf="!showThankYou" class="header">Turn Income into Same-Day Cash with iJustGotMoney.com</div>
 				<div class="summary">Stop waiting weeks for your cash. Get cash on your income within 24-hours by getting a cash advance with iJGM.</div>
 			</div>
-			<div *ngIf="isMobile" class="form-top">
+			<div *ngIf="isSmall || isMedium" class="form-top">
 				<div class="title">
 					<div class="header">
 						Contact Us Today
 					</div>
 				</div>
 				<div class="info">
-					<div class="display-phone">(972) 293-4400</div>
+					<a class="display-phone" href="tel:+1-972-293-4400">(972) 293-4400</a>
 				</div>
 			</div>
 			<div class="info">
@@ -71,7 +71,7 @@
 		<form class="gform pure-form pure-form-stacked" method="POST" data-email="info@ijustgotmoney.com"
 		action="https://script.google.com/macros/s/AKfycbyiVjVcy7OVR27xI9kKo1vQ4F56dtTe0q1IKiCmI7L3-CwbRAuI/exec">
 			<div id="form" class="form">
-				<div *ngIf="!isMobile" class="form-top">
+				<div *ngIf="isLarge" class="form-top">
 					<div class="title">
 						<div class="header">
 							Contact Us Today

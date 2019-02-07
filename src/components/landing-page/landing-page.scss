@@ -223,6 +223,206 @@
 			}
 		}
 	}
+	&.medium {
+		overflow-x: hidden;
+		.logo-wrapper {
+			height: 70px;
+			.logo {
+				margin-left: 10px;
+				text-align: left;
+				img {
+					max-width: 175px;
+				}
+			}
+		}
+		.thank-you-message {
+			padding-left: 20px;
+			font-size: 30px;
+			margin-bottom: 10px;
+		}
+		.page {
+			color: #6d6d6d;
+			float: left;
+			margin: auto;
+			padding-left: 20px;
+			text-align: left;
+			.top {
+				margin-right: 40px;
+				.header {
+					color: black;
+					font-size: 30px;
+					max-width: 800px;
+				}
+				.summary {
+					margin-top: 20px;
+					font-size: 20px;
+					margin-bottom: 25px;
+					font-family: sans-serif;
+					font-weight: 100;
+					margin-right: 10px;
+				}
+			}
+			.form-top {
+				text-align: center;
+				border: .5px solid #bbbbbb;
+				margin-bottom: 15px;
+				background-color: #f3f3f3;
+				font-size: 20px;
+				display: flex;
+				flex-direction: column;
+				width: calc(100% - 50px);;
+				.title {
+					background-color: #1F9DD8;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					width: 100%;
+					.header {
+						color: white;
+					}
+				}
+				.info {
+					margin-top: 10px;
+					margin-bottom: 10px;
+					text-align: center;
+					width: 100%;
+					.display-phone {
+						color: black;
+						text-decoration: none;
+					}
+				}
+			}
+			.info {
+				margin-right: 50px;
+				color: #6d6d6d;
+				text-align: left;
+				display: inline-block;
+				.display {
+					.highlights {
+						.pre-highlight {
+							margin-top: 20px;
+							font-size: 18px;
+							margin-bottom: 25px;
+							font-family: sans-serif;
+							font-weight: 100;
+						}
+						.title {
+							color: black;
+							font-size: 20px;
+							margin-top:	20px;
+						}
+						.sub-title {
+							font-size: 20px;
+							margin-top: 10px;
+							margin-bottom: 20px;
+							font-family: sans-serif;
+							font-weight: 100;
+						}
+						li {
+							margin-top: 20px;
+							margin-bottom: 20px;
+							color: black;
+							font-size: 20px;
+						}
+					}
+					.contact {
+						text-align:center;
+						.wrapper {
+							margin: 0 auto;
+							width:100%;
+							font-size:17px;
+							img {
+								max-width: 200px;
+								max-height: 70px;
+							}
+							.title {
+								font-size: 22px;
+							}
+							.phone {
+
+							}
+							.email {
+
+							}
+							.color {
+								color: #1F9DD8;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		form {
+			width: calc(100% - 30px);
+			text-align: center;
+			.form {
+				padding-bottom: 50px;
+				float: left;
+				min-height: 300px;
+				.inputs {
+					&.submitted {
+						display: none;
+					}
+					fieldset {
+						border: none;
+					}
+					border: .5px solid #bbbbbb;
+					background-color: #f3f3f3;
+					margin-left: 20px;
+					.title {
+						padding-left: 15px;
+						padding-top: 10px;
+						padding-bottom: 5px;
+						color: white;
+						margin-bottom: 20px;
+						background-color: #1F9DD8;
+						.header {
+							font-size: 25px;
+						}
+						.sub-title {
+							margin-top: 10px;
+							margin-bottom: 10px;
+							font-size: 17px;
+							font-family: sans-serif;
+							font-weight: 100;
+						}
+					}
+					.field-name {
+						text-align: left;
+						margin-left: 10px;
+						margin-bottom: 5px;
+					}
+					input {
+						margin-left: 10px;
+						margin-bottom:10px;
+						width: calc(100% - 20px);
+						height: 20px;
+						background-color: #f3f3f3;
+						border-top: none;
+						border-left: none;
+						border-right: none;
+						border-radius: 5px;
+						border-bottom: 1px solid #8f8e8e;
+					}
+					button {
+						margin-left: 20px;
+						margin-top: 25px;
+						background-color: #1F9DD8;
+						color: white;
+						height: 40px;
+						width: 200px;
+						margin-bottom: 30px;
+						font-size: 14px;
+					}
+					.thank-you-message {
+						font-size: 23px;
+						margin-left: -17px;
+						margin-bottom: 20px;
+					}
+				}
+			}
+		}
+	}
 	&.small {
 		overflow-x: hidden;
 		.logo-wrapper {
@@ -287,6 +487,7 @@
 					width: 100%;
 					.display-phone {
 						color: black;
+						text-decoration: none;
 					}
 				}
 			}
