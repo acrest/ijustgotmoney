@@ -203,6 +203,9 @@
 						border-right: none;
 						border-radius: 5px;
 						border-bottom: 1px solid #8f8e8e;
+						&.invalid {
+							border-bottom: 1px solid red;
+						}
 					}
 					button {
 						margin-left: 20px;
@@ -218,6 +221,10 @@
 						font-size: 23px;
 						margin-left: -17px;
 						margin-bottom: 20px;
+					}
+					.invalid-field-warning {
+						margin-left: 10px;
+						margin-bottom: 10px;
 					}
 				}
 			}
@@ -403,6 +410,9 @@
 						border-right: none;
 						border-radius: 5px;
 						border-bottom: 1px solid #8f8e8e;
+						&.invalid {
+							border-bottom: 1px solid red;
+						}
 					}
 					button {
 						margin-left: 20px;
@@ -418,6 +428,10 @@
 						font-size: 23px;
 						margin-left: -17px;
 						margin-bottom: 20px;
+					}
+					.invalid-field-warning {
+						margin-left: 10px;
+						margin-bottom: 10px;
 					}
 				}
 			}
@@ -604,6 +618,9 @@
 						border-right: none;
 						border-radius: 5px;
 						border-bottom: 1px solid #8f8e8e;
+						&.invalid {
+							border-bottom: 1px solid red;
+						}
 					}
 					button {
 						margin-left: 20px;
@@ -619,6 +636,10 @@
 						font-size: 23px;
 						margin-left: -17px;
 						margin-bottom: 20px;
+					}
+					.invalid-field-warning {
+						margin-left: 10px;
+						margin-bottom: 10px;
 					}
 				}
 			}

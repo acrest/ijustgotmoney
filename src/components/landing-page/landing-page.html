@@ -69,7 +69,7 @@
 			</div>
 		</div>
 
-		<form class="gform pure-form pure-form-stacked" method="POST" data-email="info@ijustgotmoney.com"
+		<form #contactForm="ngForm" class="gform pure-form pure-form-stacked" method="POST" data-email="info@ijustgotmoney.com"
 		action="https://script.google.com/macros/s/AKfycbyiVjVcy7OVR27xI9kKo1vQ4F56dtTe0q1IKiCmI7L3-CwbRAuI/exec">
 			<div id="form" class="form">
 				<div *ngIf="isLarge" class="form-top">
@@ -93,24 +93,27 @@
 					</div>
 					<ng-container>
 						<fieldset>
-							<label class="field-name" for="first-name">First Name: </label>
-							<input id="first-name" name="first-name"/>
+							<label class="field-name" for="first-name">First Name*: </label>
+							<input (input)="onFirstNameChange()" [(ngModel)]="firstNameInput" #firstName="ngModel" id="first-name" name="first-name" minlength="1" [class.invalid]="!validFirstName && firstNameChanged"/>
 						</fieldset>
 						<fieldset>
-							<label class="field-name" for="last-name">Last Name:</label>
-							<input id="last-name" name="last-name"/>
+							<label class="field-name" for="last-name">Last Name*:</label>
+							<input (input)="onLastNameChange()" [(ngModel)]="lastNameInput" #lastName="ngModel" id="last-name" name="last-name" minlength="1" [class.invalid]="!validLastName && lastNameChanged"/>
 						</fieldset>
 						<fieldset>
-							<label class="field-name" for="phone">Mobile Phone:</label>
-							<input id="phone" name="phone"/>
+							<label class="field-name" for="phone">Mobile Phone*:</label>
+							<input (input)="onMobileChange()" [(ngModel)]="mobilePhone" #phone="ngModel" id="phone" name="phone" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" [class.invalid]="!validMobilePhone && mobilePhoneChanged"/>
 						</fieldset>
 						<fieldset>
-							<label class="field-name" for="email">Email Address:</label>
-							<input type="text" id="email" name="email"/>
+							<label class="field-name" for="email">Email Address*:</label>
+							<input (input)="onEmailChange()" [(ngModel)]="emailAddress" #email="ngModel" type="email" id="email" name="email" email pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [class.invalid]="!validEmailAddress && emailAddressChanged"/>
 						</fieldset>
-						<button (click)="submit()">
+						<button (click)="submit()" [disabled]="!contactForm.dirty || !canSubmit">
 							<i class="fa fa-paper-plane"></i>&nbsp;Submit
 						</button>
+						<div *ngIf="showIncompleteMessage" class="invalid-field-warning">
+							*Please correct invalid fields
+						</div>
 					</ng-container>
 				</div>
 			</div>
