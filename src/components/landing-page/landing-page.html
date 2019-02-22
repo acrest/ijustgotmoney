@@ -106,7 +106,7 @@
 						</fieldset>
 						<fieldset>
 							<label class="field-name" for="email">Email Address*:</label>
-							<input (input)="onEmailChange()" [(ngModel)]="emailAddress" #email="ngModel" type="email" id="email" name="email" email pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [class.invalid]="!validEmailAddress && emailAddressChanged"/>
+							<input (input)="onEmailChange()" [(ngModel)]="emailAddress" #email="ngModel" type="email" id="email" name="email" email pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,3}$" [class.invalid]="!validEmailAddress && emailAddressChanged"/>
 						</fieldset>
 						<button (click)="submit()" [disabled]="!contactForm.dirty || !canSubmit">
 							<i class="fa fa-paper-plane"></i>&nbsp;Submit
